@@ -12,6 +12,7 @@ require('dotenv').config();
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const socket = io.connect(`${BACKEND_URL}`);
+
 // const socket = io.connect('http://localhost:5000');
 function App() {
   console.log(BACKEND_URL);
