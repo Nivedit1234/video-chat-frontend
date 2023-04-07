@@ -99,7 +99,16 @@ function App() {
 
   return (
     <>
-      <h1 style={{ textAlign: 'center', color: '#fff' }}>Video Chat FARMIT</h1>
+      {/* <h1 style={{ textAlign: 'center', color: '#fff' }}>Video Chat FARMIT</h1> */}
+      <h1
+        style={{
+          textAlign: 'center',
+          color: 'orange',
+          alignContent: 'center',
+        }}
+      >
+        Video Call FARMIT
+      </h1>
       <div className='container'>
         <div className='video-container'>
           <div className='video'>
@@ -132,6 +141,11 @@ function App() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             style={{ marginBottom: '20px' }}
+            InputLabelProps={{
+              style: {
+                color: 'white',
+              },
+            }}
           />
           <CopyToClipboard text={me} style={{ marginBottom: '2rem' }}>
             <Button
@@ -149,6 +163,11 @@ function App() {
             variant='filled'
             value={idToCall}
             onChange={(e) => setIdToCall(e.target.value)}
+            InputLabelProps={{
+              style: {
+                color: 'white',
+              },
+            }}
           />
           <div className='call-button'>
             {callAccepted && !callEnded ? (
